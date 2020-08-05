@@ -243,6 +243,8 @@ export class MarketDepths extends React.PureComponent<MarketDepthsProps> {
                             dataKey={settings.dataKeyX || 'ask'}
                             interval={intervalX || 'preserveStartEnd'}
                             stroke={colorSettings.strokeAxisColor}
+                            type="number"
+                            domain={[dataMin => (Math.abs(dataMin) * 0.8), dataMax => (Math.abs(dataMax) * 1.2)]}
                         />
                         <YAxis
                             orientation={orientation ? orientation : 'left'}
