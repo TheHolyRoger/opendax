@@ -73,7 +73,7 @@ export class WalletTable extends React.Component<Props> {
         } = this.props;
         if (nextProps.currency !== currency || nextProps.type !== type) {
             this.props.resetHistory();
-            this.props.fetchHistory({ page: 0, currency: nextProps.currency, type, limit: 6 });
+            this.props.fetchHistory({ page: 0, currency: nextProps.currency, type: type, limit: 6 });
         }
 
         if (nextProps.currencies.length === 0 && nextProps.currencies !== currencies) {
